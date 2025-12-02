@@ -57,15 +57,7 @@ export default function CreditsPage() {
         </div>
       </div>
 
-      {/* Transaction History Placeholder */}
-      <div className="mt-12">
-        <h2 className="text-lg font-semibold text-foreground mb-6">Transaction History</h2>
-        <div className="rounded-xl bg-card shadow-lg ring-1 ring-border overflow-hidden">
-          <div className="p-8 text-center text-muted-foreground">
-            <p>No transactions found.</p>
-          </div>
-        </div>
-      </div>
+
     </div>
   );
 }

@@ -79,11 +79,11 @@ body {
 }
 
 @utility glass {
-  @apply bg-white/50 dark:bg-zinc-900/50 backdrop-blur-xl border border-zinc-200 dark:border-white/10;
+  @apply bg-white/50 dark:bg-violet-950/30 backdrop-blur-xl border border-zinc-200 dark:border-white/10;
 }
 
 @utility glass-hover {
-  @apply hover:bg-zinc-100/50 dark:hover:bg-zinc-800/50 hover:border-zinc-300 dark:hover:border-white/20 transition-all duration-300;
+  @apply hover:bg-zinc-100/50 dark:hover:bg-violet-900/30 hover:border-zinc-300 dark:hover:border-white/20 transition-all duration-300;
 }
 
 @utility text-gradient {

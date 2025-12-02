@@ -124,31 +124,7 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      <div className="mt-12">
-        <h2 className="text-lg font-semibold text-foreground mb-6">Recent Activity</h2>
-        <div className="overflow-hidden rounded-xl bg-card shadow-lg ring-1 ring-border">
-          <div className="p-6">
-            {stats?.recentGenerations.length === 0 ? (
-              <p className="text-muted-foreground text-center py-4">No activity yet. Start creating!</p>
-            ) : (
-              <ul role="list" className="divide-y divide-border">
-                {stats?.recentGenerations.map((item: any) => (
-                  <li key={item.id} className="py-4 flex justify-between items-center">
-                    <div>
-                      <p className="text-sm font-medium text-foreground">{item.type}</p>
-                      <p className="text-xs text-muted-foreground truncate max-w-md">{item.prompt}</p>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-xs text-muted-foreground">{new Date(item.createdAt).toLocaleDateString()}</p>
-                      <p className="text-xs font-medium text-primary">-{item.cost} credits</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        </div>
-      </div>
+
     </div>
   );
 }
