@@ -14,10 +14,11 @@ declare module "next-auth" {
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
     // adapter: PrismaAdapter(db), // Removed for No-Auth mode
+    secret: process.env.NEXTAUTH_SECRET ?? "dummy-secret-for-dev",
     providers: [
         Google({
-            clientId: process.env.GOOGLE_CLIENT_ID,
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+            clientId: process.env.GOOGLE_CLIENT_ID ?? "dummy-client-id",
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? "dummy-client-secret",
         }),
     ],
     callbacks: {
