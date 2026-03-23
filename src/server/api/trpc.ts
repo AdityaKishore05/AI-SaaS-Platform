@@ -4,10 +4,15 @@ import { db } from "@/server/db";
 import { auth } from "@/server/auth";
 
 export const createTRPCContext = async (opts: { headers: Headers }) => {
-    const session = await auth();
+    let session = null;
+    try {
+        session = await auth();
+    } catch (error) {
+        console.error("Context auth error:", error);
+    }
 
     // Mock session for No-Auth mode
-    const finalSession = session ?? {
+    const finalSession = session?.user ? session : {
         user: {
             id: "dummy-user-id",
             name: "Guest User",

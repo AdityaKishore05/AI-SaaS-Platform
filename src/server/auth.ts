@@ -22,13 +22,13 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         }),
     ],
     callbacks: {
-        session: ({ session, user }) => {
+        session: ({ session, user, token }) => {
             return {
                 ...session,
                 user: {
                     ...session.user,
-                    id: user.id,
-                    credits: (user as any).credits ?? 0,
+                    id: user?.id ?? token?.sub ?? "dummy-id",
+                    credits: (user as any)?.credits ?? (token as any)?.credits ?? 0,
                 },
             };
         },

@@ -72,7 +72,7 @@ export const aiRouter = createTRPCRouter({
                 */
 
                 return { output, creditsRemaining: 9999 };
-            } catch (error) {
+            } catch (error: any) {
                 console.error("Detailed AI Generation Error:", error);
                 if (error instanceof Error) {
                     console.error("Error Message:", error.message);
@@ -80,7 +80,7 @@ export const aiRouter = createTRPCRouter({
                 }
                 throw new TRPCError({
                     code: "INTERNAL_SERVER_ERROR",
-                    message: "Failed to generate content. Check server logs for details.",
+                    message: "Failed to generate content: " + (error?.message || String(error)),
                     cause: error,
                 });
             }

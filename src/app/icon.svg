@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <rect width="256" height="256" rx="64" fill="#0f172a"/>
+  <!-- Diamond / Sparkle shape common for AI -->
+  <path d="M128 32 C128 85, 171 128, 224 128 C171 128, 128 171, 128 224 C128 171, 85 128, 32 128 C85 128, 128 85, 128 32 Z" fill="#3b82f6"/>
+  <circle cx="128" cy="128" r="28" fill="#ffffff" opacity="0.9"/>
+</svg>
